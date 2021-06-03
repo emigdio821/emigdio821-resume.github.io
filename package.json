@@ -6,5 +6,8 @@
   "repository": "https://github.com/emigdio821/responsive-cv.git",
   "author": "Emigdio Torres",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "html2pdf.js": "^0.9.3"
+  }
 }
