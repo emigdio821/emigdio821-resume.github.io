@@ -4,71 +4,323 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--========== BOX ICONS ==========-->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
-    <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Emigdio Torres</title>
-    <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico" />
   </head>
   <body>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header"></header>
+    <!-- Header -->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">EMIGDIO <b>TORRES</b></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="fas fa-home nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <i class="fas fa-user-circle nav__icon"></i>Profile
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__link">
+                <i class="fas fa-graduation-cap nav__icon"></i>Education
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="fas fa-mug-hot nav__icon"></i>Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">
+                <i class="fas fa-briefcase nav__icon"></i>Experience
+              </a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="#hobbies" class="nav__link">
+                <i class="fas fa-ghost nav__icon"></i>Hobbies
+              </a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-grip-horizontal"></i>
+        </div>
+      </nav>
+    </header>
 
     <main class="l-main bd-container">
-      <!-- All elements within this div, is generated in PDF -->
       <div class="resume" id="area-cv">
         <div class="resume__left">
-          <!--========== HOME ==========-->
+          <!-- Home -->
           <section class="home" id="home">
-            <!-- Theme change button -->
-
-            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <img src="assets/img/em.jpg" alt="" class="home__img" />
+                <h1 class="home__title">EMIGDIO <b>TORRES</b></h1>
+                <h3 class="home__profession">Software Engineer</h3>
+                <div>
+                  <a
+                    download=""
+                    href="assets/pdf/emigdio-resume.pdf"
+                    class="home__button-mobile"
+                    ><i class="fas fa-file-pdf pdf__icon"></i>Download</a
+                  >
+                </div>
+              </div>
+              <div class="home__address bd-grid">
+                <span class="home__info">
+                  <i class="fas fa-mobile-alt home__icon"></i>+52 (313) 961-7676
+                </span>
+                <span class="home__info">
+                  <i class="fa fa-envelope home__icon"></i>emigdio821@gmail.com
+                </span>
+                <span class="home__info">
+                  <i class="fas fa-map-marker-alt home__icon"></i>Zapopan,
+                  Jalisco, Mexico
+                </span>
+              </div>
+            </div>
+            <i
+              class="fas fa-adjust change-theme"
+              title="Theme"
+              id="theme-button"
+            ></i>
+            <i
+              class="fas fa-file-pdf generate-pdf"
+              title="Generate PDF"
+              id="pdf-button"
+            ></i>
           </section>
 
-          <!--========== SOCIAL ==========-->
-          <section class="social section"></section>
+          <!-- Social -->
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
+            <div class="social__container bd-grid">
+              <a
+                href="https://www.linkedin.com/in/emigdio821/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="fab fa-linkedin-in social__icon"></i> @emigdio821
+              </a>
+              <a
+                href="https://twitter.com/emigdio821/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="fab fa-twitter social__icon"></i> @emigdio821
+              </a>
+              <a
+                href="https://github.com/emigdio821/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="fab fa-github social__icon"></i> @emigdio821
+              </a>
+            </div>
+          </section>
 
-          <!--========== PROFILE ==========-->
-          <section class="profile section" id="profile"></section>
+          <!-- Profile -->
+          <section class="profile section" id="profile">
+            <h2 class="section-title">Profile</h2>
+            <p class="profile__description description-spacing">
+              <b>Telematics Engineer</b> with experience in Software Engineering
+              using current programming standards.
+            </p>
+            <p class="profile__description">
+              Currently I am a Software Engineer at <b>HCL Technologies</b>. I
+              have no problem to adapt in new environments and technologies.
+            </p>
+          </section>
 
-          <!--========== EDUCATION ==========-->
-          <section class="education section" id="education"></section>
-
-          <!--========== SKILLS  ==========-->
-          <section class="skills section" id="skills"></section>
+          <!-- Skills -->
+          <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills__container bd-grid">
+              <div class="skills__content">
+                <i class="fab fa-css3-alt skills__icon"></i>
+                <span class="skills__name">CSS</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-html5 skills__icon"></i>
+                <span class="skills__name">HTML</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-js-square skills__icon"></i>
+                <span class="skills__name">JS</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-git-alt skills__icon"></i>
+                <span class="skills__name">Git</span>
+              </div>
+              <div class="skills__content">
+                <i class="fas fa-database skills__icon"></i>
+                <span class="skills__name">SQL</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-vuejs skills__icon"></i>
+                <span class="skills__name">Vue</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-react skills__icon"></i>
+                <span class="skills__name">React</span>
+              </div>
+              <div class="skills__content">
+                <i class="fab fa-node skills__icon"></i>
+                <span class="skills__name">Node</span>
+              </div>
+            </div>
+          </section>
         </div>
 
         <div class="resume__right">
-          <!--========== EXPERIENCE ==========-->
-          <section class="experience section" id="experience"></section>
+          <!-- Education -->
+          <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education__container bd-grid">
+              <div class="education__content">
+                <!-- <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <span class="education__line"></span>
+                </div> -->
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">Telematics Engineer</h3>
+                  <span class="education__studies">Engineer’s Degree</span>
+                  <span class="education__studies">University of Colima</span>
+                  <span class="education__year">2010 - 2014</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Experience -->
+          <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience__container bd-grid">
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Web Developer</h3>
+                  <span class="experience__company">
+                    2014 to 2017 | <b>TATA Consultancy Services</b>
+                  </span>
+                  <p class="experience__description">
+                    Frontend work, using JavaScript under a framework called:
+                    ExtJS.
+                  </p>
+                  <p>
+                    Development of banking web apps for Morgan Stanley bank.
+                  </p>
+                </div>
+              </div>
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Software Engineer</h3>
+                  <span class="experience__company">
+                    2017 to 2019 | <b>Advanced Methods Co.</b> (<b>Amco</b>)
+                  </span>
+                  <p class="experience__description">
+                    Frontend work, using SASS, JQuery, Bootstrap. Sometimes
+                    worked on Backend, using Ruby on Rails.
+                  </p>
+                  <p>
+                    Development of Payments portal for an education platform.
+                  </p>
+                </div>
+              </div>
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <!-- <span class="experience__line"></span> -->
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Web Developer</h3>
+                  <span class="experience__company">
+                    2019 to present | <b>HCL Technologies</b>
+                  </span>
+                  <p class="experience__description">
+                    Currently using IBM JS Dojo toolkit, ReactJS and Redux.
+                  </p>
+                  <p>Development of an application builder.</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-          <!--========== CERTIFICATES ==========-->
-          <section class="certificate section" id="certificates"></section>
+          <!-- Languages -->
+          <section class="languages section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages__container bd-grid">
+              <div class="languages__content">
+                <i class="fas fa-language languages__icon"></i>
+                <span class="languages__name">Spanish</span>
+              </div>
+              <div class="languages__content">
+                <i class="fas fa-language languages__icon"></i>
+                <span class="languages__name">English</span>
+              </div>
+            </div>
+          </section>
 
-          <!--========== REFERENCES ==========-->
-          <section class="references section" id="references"></section>
-
-          <!--========== LANGUAGES ==========-->
-          <section class="languages section"></section>
-
-          <!--========== INTERESTS ==========-->
-          <section class="interests section"></section>
+          <!-- Hobbies -->
+          <section class="hobbies section">
+            <h2 class="section-title">Hobbies & Interests</h2>
+            <div class="hobbies__container bd-grid">
+              <div class="hobbies__content">
+                <i class="fas fa-drum hobbies__icon"></i>
+                <span class="hobbies__name">Drums</span>
+              </div>
+              <div class="hobbies__content">
+                <i class="fas fa-headphones hobbies__icon"></i>
+                <span class="hobbies__name">Music</span>
+              </div>
+              <div class="hobbies__content">
+                <i class="fab fa-steam hobbies__icon"></i>
+                <span class="hobbies__name">Gaming</span>
+              </div>
+              <div class="hobbies__content">
+                <i class="fas fa-laptop-code hobbies__icon"></i>
+                <span class="hobbies__name">Tech</span>
+              </div>
+              <div class="hobbies__content">
+                <i class="fab fa-js-square hobbies__icon"></i>
+                <span class="hobbies__name">JavaScript</span>
+              </div>
+              <div class="hobbies__content">
+                <i class="fas fa-tree hobbies__icon"></i>
+                <span class="hobbies__name">Nature</span>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
 
-    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="fas fa-arrow-up scrolltop__icon"></i>
+    </a>
 
-    <!--========== HTML2PDF ==========-->
     <script src="assets/js/html2pdf.bundle.min.js"></script>
-
-    <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
