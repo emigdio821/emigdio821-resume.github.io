@@ -44,6 +44,17 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
+// Scroll animation
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 // Scroll top button
 function scrollTop() {
   const scrollTop = document.getElementById("scroll-top");

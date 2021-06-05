@@ -2,9 +2,11 @@
 
 /* CSS variables */
 :root {
-  --header-height: 3rem;
+  --header-height: 4rem;
 
   --body-color: #fcfcfc;
+  --body-color-alt: #606060;
+  /* --body-color: #fcfcfc; */
   --title-color: #0b0a0a;
   --text-color: #403a3a;
   --text-color-light: #707070;
@@ -42,15 +44,21 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: background-color 0.3s;
+}
+
 /* Dark theme */
 body.dark-theme {
   --body-color: #2b2b2b;
+  --body-color-alt: #2b2b2b;
   --text-color: #bfbfbf;
   --title-color: #f2f2f2;
   --container-color: #212121;
   --container-color-alt: #181616;
   --container-color-hover: #313131;
 }
+
 .change-theme {
   right: 0;
   top: 2.2rem;
@@ -224,6 +232,11 @@ img {
 /* Section */
 .section {
   padding: 1.5rem 0;
+}
+
+
+.hobbies.section {
+  padding-bottom: 4rem;
 }
 
 .section-title {
@@ -526,13 +539,13 @@ img {
 .scrolltop {
   right: 1rem;
   bottom: -20%;
-  padding: 0.8rem;
   display: flex;
   position: fixed;
   transition: 0.4s;
   visibility: hidden;
   align-items: center;
   border-radius: 0.5rem;
+  padding: 0.5rem 0.3rem;
   justify-content: center;
   z-index: var(--z-tooltip);
   background-color: var(--container-color-alt);
@@ -592,6 +605,7 @@ img {
 @media screen and (min-width: 968px) {
   body {
     margin: 3rem 0;
+    background-color: var(--body-color-alt);
   }
 
   .bd-container {
