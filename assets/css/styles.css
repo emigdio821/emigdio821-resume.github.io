@@ -60,7 +60,7 @@ body.dark-theme {
 
 .change-theme {
   right: 0;
-  top: 2.2rem;
+  top: 1.7rem;
   display: flex;
   cursor: pointer;
   font-size: 1.2rem;
@@ -89,7 +89,7 @@ body.scale-cv {
 /* PDF button */
 .generate-pdf {
   left: 0;
-  top: 2.2rem;
+  top: 1.7rem;
   display: none;
   cursor: pointer;
   font-size: 1.2rem;
