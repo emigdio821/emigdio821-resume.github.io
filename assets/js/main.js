@@ -1,24 +1,33 @@
 // Show menu
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+    nav = document.getElementById(navId),
+    header = document.getElementById("header");
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show-menu");
+      header.classList.toggle("darken-header");
     });
   }
 };
 showMenu("nav-toggle", "nav-menu");
 
 //Remove mobile menu
-const navLink = document.querySelectorAll(".nav__link");
+window.addEventListener("mouseup", function (event) {
+  var navToggle = document.getElementById("nav-toggle");
+  if (event.target !== navToggle && event.target.parentNode !== navToggle) {
+    linkAction();
+  }
+});
 
 function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
+  const navMenu = document.getElementById("nav-menu"),
+    header = document.getElementById("header");
+
   navMenu.classList.remove("show-menu");
+  header.classList.remove("darken-header");
 }
-navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 //Scroll section active link
 const sections = document.querySelectorAll("section[id]");
@@ -29,7 +38,12 @@ function scrollActive() {
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+    const sectionId = current.getAttribute("id");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (navMenu && navMenu.classList.contains("show-menu")) {
+      linkAction();
+    }
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
@@ -48,7 +62,6 @@ window.addEventListener("scroll", scrollActive);
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
@@ -98,9 +111,17 @@ let areaCvContainer = document.getElementById("area-cv");
 let pdfOpts = {
   margin: 1,
   filename: "emigdio-resume.pdf",
-  image: { type: "jpeg", quality: 0.98 },
-  html2canvas: { scale: 4 },
-  jsPDF: { format: "a4", orientation: "portrait" },
+  image: {
+    type: "jpeg",
+    quality: 0.98,
+  },
+  html2canvas: {
+    scale: 4,
+  },
+  jsPDF: {
+    format: "a4",
+    orientation: "portrait",
+  },
 };
 
 function genereatePdf() {

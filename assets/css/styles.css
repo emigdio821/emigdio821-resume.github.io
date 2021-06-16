@@ -325,6 +325,10 @@ img {
   bottom: var(--header-height) !important;
 }
 
+.darken-header{
+  background-color: var(--container-color-alt);
+}
+
 .active-link {
   border-radius: 0.5rem;
   color: var(--title-color);
@@ -567,6 +571,16 @@ img {
   }
 }
 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+    .skills__container,
+    .hobbies__container {
+      column-gap: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media screen and (max-width: 968px) {
   .nav__menu {
     left: 0;
@@ -577,8 +591,8 @@ img {
     position: fixed;
     z-index: var(--z-fixed);
     border-radius: 0.5rem 0.5rem 0 0;
-    background-color: var(--body-color);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color-alt);
+    box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.1);
   }
 
   .home__info,
@@ -646,17 +660,13 @@ img {
     display: none;
   }
 
-  .skills__container {
+  .skills__container,
+  .hobbies__container {
     column-gap: 3rem;
     grid-template-columns: repeat(4, max-content);
   }
 
   .languages__container {
-    column-gap: 3rem;
-    grid-template-columns: repeat(3, max-content);
-  }
-
-  .hobbies__container {
     column-gap: 3rem;
     grid-template-columns: repeat(3, max-content);
   }
