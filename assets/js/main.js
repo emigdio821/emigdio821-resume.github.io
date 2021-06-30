@@ -1,3 +1,9 @@
+const overlay = document.getElementById("overlay");
+
+overlay.addEventListener("click", () => {
+  linkAction();
+});
+
 // Show menu
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
@@ -8,18 +14,19 @@ const showMenu = (toggleId, navId) => {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show-menu");
       header.classList.toggle("darken-header");
+      overlay.classList.toggle("show-overlay");
     });
   }
 };
 showMenu("nav-toggle", "nav-menu");
 
 //Remove mobile menu
-window.addEventListener("mouseup", function (event) {
-  var navToggle = document.getElementById("nav-toggle");
-  if (event.target !== navToggle && event.target.parentNode !== navToggle) {
-    linkAction();
-  }
-});
+// window.addEventListener("mouseup", function (event) {
+//   var navToggle = document.getElementById("nav-toggle");
+//   if (event.target !== navToggle && event.target.parentNode !== navToggle) {
+//     linkAction();
+//   }
+// });
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu"),
@@ -27,6 +34,7 @@ function linkAction() {
 
   navMenu.classList.remove("show-menu");
   header.classList.remove("darken-header");
+  overlay.classList.remove("show-overlay");
 }
 
 //Scroll section active link
