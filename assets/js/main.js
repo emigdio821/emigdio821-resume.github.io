@@ -115,6 +115,7 @@ function removeCvScale() {
 
 let pdfBtn = document.getElementById("pdf-button");
 let areaCvContainer = document.getElementById("area-cv");
+let animationContainer = document.getElementById("pdf__animation-container");
 
 let pdfOpts = {
   margin: 1,
@@ -135,10 +136,20 @@ let pdfOpts = {
 function genereatePdf() {
   html2pdf(areaCvContainer, pdfOpts).then(() => {
     removeCvScale();
+    disableAnimation();
   });
 }
 
+function enableAnimation() {
+  animationContainer.style.display = "grid";
+}
+
+function disableAnimation() {
+  animationContainer.style.display = "none";
+}
+
 pdfBtn.addEventListener("click", () => {
+  enableAnimation();
   scaleCv();
   genereatePdf();
 });
