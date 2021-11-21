@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* CSS variables */
 :root {
@@ -107,9 +107,9 @@ body {
 /* Dark theme */
 body.dark-theme {
   --body-color: #2b2b2b;
-  --body-color-alt: #2b2b2b;
   --text-color: #bfbfbf;
   --title-color: #f2f2f2;
+  --body-color-alt: #2b2b2b;
   --container-color: #212121;
   --container-color-alt: #181616;
   --container-color-hover: #313131;
@@ -130,8 +130,7 @@ body.dark-theme {
 }
 
 /*
-  Scale CV in case they does not fit
-  font variables
+  Scale CV
 */
 
 body.scale-cv {
@@ -688,12 +687,14 @@ img {
 
   .resume {
     display: grid;
+    border-radius: 4px;
     grid-template-columns: 0.5fr 1fr;
     background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
   }
 
   .resume__left {
+    border-radius: 4px 0 0 4px;
     background-color: var(--container-color-alt);
   }
 
