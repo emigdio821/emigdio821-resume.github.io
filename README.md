@@ -1,4 +1,4 @@
-## Emigdio's resume
+## Emigdio's resume (no longer maintained)
 Just my resume with option to download it as PDF. <br>
 
 ### Big thanks to
